@@ -1,166 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage von Man-To Hui</title>
-  <style>
-    body {
-      background-image: url('images/back.jpg');
-      background-color: #ffffcc;
-      color: #000;
-      font-family: 'Times New Roman', Times, serif;
-      margin: 0;
-      padding: 0;
-    }
-    header, nav, main, footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .rainbow-title {
-      font-size: 2.5em;
-      font-weight: bold;
-      margin: 1em 0 0.5em;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-    .rainbow-title span { display: inline-block; }
-    .color-1 { color: #ff0000; }
-    .color-2 { color: #ff3300; }
-    .color-3 { color: #ff9933; }
-    .color-4 { color: #ffcc00; }
-    .color-5 { color: #0000ff; }
-    .color-6 { color: #00ff00; }
-    .color-7 { color: #33cc33; }
-    .color-8 { color: #59ddd7; }
-    .color-9 { color: #3399ff; }
-    nav {
-      margin: 1em 0;
-      font-size: 1.2em;
-    }
-    nav a {
-      color: #3399ff;
-      text-decoration: none;
-      margin: 0 0.7em;
-      transition: text-decoration 0.2s, color 0.2s;
-    }
-    nav a:hover, nav a:focus {
-      text-decoration: underline;
-      color: #ff3300;
-    }
-    .nav-divider {
-      color: #b0b0b0;
-    }
-    .banner-img {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      margin-bottom: 1em;
-      border-radius: 6px;
-    }
-    hr {
-      border: none;
-      border-top: 2px solid #3399ff;
-      width: 90%;
-      max-width: 500px;
-      margin: 1.5em 0;
-    }
-    .comet-section a, .soho-section a, .cheung-section a {
-      color: #3399ff;
-      font-size: 1em;
-    }
-    .soho-section a, .cheung-section a {
-      color: #007799;
-      font-weight: bold;
-      background: #ddd;
-      padding: 0.2em 0.5em;
-      border-radius: 4px;
-      margin: 0.2em;
-      text-decoration: none;
-    }
-    .soho-section a:hover, .cheung-section a:hover {
-      background: #b8e9f5;
-      color: #000;
-    }
-    @media (max-width: 600px) {
-      .rainbow-title { font-size: 1.5em; }
-      .banner-img { max-width: 100%; }
-      nav { font-size: 1em; }
-    }
-    .email-img {
-      width: 267px;
-      height: 40px;
-      margin: 1em 0;
-      border: 0;
-    }
-    footer {
-      margin-top: 2em;
-      background: rgba(255,255,255,0.6);
-      width: 100%;
-      text-align: center;
-      padding: 1em 0 1.5em 0;
-    }
-    .copyright {
-      color: #666;
-      font-size: 0.95em;
-      margin-top: 0.5em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Homepage von Man-To Hui</title>
+    <style>
+        /* Global & Layout Styles */
+        body {
+            background-image: url('images/back.jpg');
+            background-attachment: fixed;
+            background-color: #000000;
+            color: #000000;
+            margin: 0 90px;
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+        }
+
+        /* Link Styles */
+        a {
+            text-decoration: underline;
+        }
+        a:link, a:visited {
+            color: #3399ff;
+        }
+        a:active {
+            color: #0000ee;
+        }
+        a.link-white:link, a.link-white:visited {
+            color: #ffffff;
+        }
+
+        /* Typography & Utility Classes */
+        .text-white { color: #ffffff; }
+        .text-blue { color: #3399ff; }
+        
+        .font-small { font-size: small; }
+        .font-large { font-size: large; }
+        .font-xxlarge { font-size: xx-large; }
+        
+        .no-margin-top { margin-top: 0; }
+        .border-none { border: none; }
+        
+        /* Horizontal Rules */
+        hr {
+            border: 1px inset;
+            margin: 0 auto;
+        }
+        .hr-500 { width: 500px; }
+        .hr-60 { width: 60%; }
+
+        /* Multi-colored Title Colors */
+        .c-ho { color: #ff0000; }
+        .c-m { color: #ff3300; }
+        .c-ep { color: #ff9933; }
+        .c-age { color: #ffcc00; }
+        .c-space { color: #0000ff; }
+        .c-vo { color: #00ff00; }
+        .c-n { color: #33cc33; }
+        .c-man { color: #59ddd7; }
+        .c-to { color: #3399ff; }
+        .c-hui { color: #0000ff; }
+    </style>
 </head>
 <body>
-  <header>
-    <h1 class="rainbow-title" aria-label="Homepage von Man-To Hui">
-      <span class="color-1">Ho</span>
-      <span class="color-2">m</span>
-      <span class="color-3">ep</span>
-      <span class="color-4">age</span>
-      <span class="color-5">&nbsp;</span>
-      <span class="color-6">vo</span>
-      <span class="color-7">n</span>
-      <span class="color-5">&nbsp;</span>
-      <span class="color-8">Man-</span>
-      <span class="color-9">To</span>
-      <span class="color-5"> Hui</span>
+
+    <!-- Header Section -->
+    <h1><br></h1>
+    <h1 class="font-xxlarge">
+        <span class="c-ho">Ho</span><span class="c-m">m</span><span class="c-ep">ep</span><span class="c-age">age</span><span class="c-space"> </span><span class="c-vo">vo</span><span class="c-n">n</span><span class="c-space"> </span><span class="c-man">Man-</span><span class="c-to">To</span><span class="c-hui"> Hui</span>
     </h1>
-  </header>
+    
+    <div>&nbsp;</div>
+    <div><br></div>
 
-  <main>
-    <img class="banner-img" src="images/work_banner.png" alt="Work banner illustration for Man-To Hui">
-    <hr>
-    <nav aria-label="Primary navigation">
-      <a href="bib.html">Publications</a>
-      <span class="nav-divider">|</span>
-      <a href="scwrk/Research.html">Research</a>
-      <span class="nav-divider">|</span>
-      <a href="astrophoto/index.htm">Astrophotography</a>
-      <span class="nav-divider">|</span>
-      <a href="sketches/sketch.htm">Sketches</a>
-      <span class="nav-divider">|</span>
-      <a href="about-me.html">About me</a>
-      <span class="nav-divider">(</span>
-      <a href="VITA.pdf" target="_blank">PDF</a>
-      <span class="nav-divider">)</span>
-    </nav>
+    <!-- Main Content & Navigation -->
+    <div>
+        <h3>
+            <img class="border-none" style="width: 500px; height: 302px;" alt="" src="images/work_banner.png"><br>
+        </h3>
+        <hr class="hr-500">
+        <h3>&nbsp;</h3>
+        <p><br></p>
 
-    <section class="comet-section" aria-label="Comet Observations">
-      <a href="comet_obs/visual_obs_ICQ.htm">Comet Observations (ICQ format)</a>
-    </section>
+        <!-- Publications | Research -->
+        <h3>
+            <a href="bib.html">Publications</a>
+            <span class="text-white"> | </span>
+            <a href="scwrk/Research.html">Research</a>
+        </h3>
 
-    <section class="soho-section" aria-label="SOHO Comets">
-      <a href="SOHO/my_soho.htm">My SOHO Comets</a>
-    </section>
+        <!-- Astrophotography -->
+        <h3 class="font-large">
+            <a href="astrophoto/index.htm" class="text-blue">Astrophotography</a>
+        </h3>
 
-    <section class="cheung-section" aria-label="Cheungtaklung">
-      <a href="TCheung/tcheung.html">(361193) Cheungtaklung</a>
-    </section>
-  </main>
+        <!-- Sketches | About me -->
+        <h3 class="font-large">
+            <a href="sketches/sketch.htm" class="text-blue">Sketches</a>
+            <span class="text-white"> | </span>
+            <a href="about-me.html" class="text-blue">About me</a>
+            <span class="text-blue"> (</span><a target="_blank" href="VITA.pdf" class="text-blue">PDF</a><span class="text-blue">)</span><br>
+        </h3>
 
-  <footer>
-    <img class="email-img" src="images/email.png" alt="Email address for Man-To Hui">
-    <div class="copyright">
-      &copy; 2006-2026 Man-To Hui
+        <!-- Comet Observations -->
+        <h3 class="font-large">
+            <span class="text-blue">&nbsp;&nbsp;&nbsp; </span>
+            <a href="comet_obs/visual_obs_ICQ.htm" class="text-blue">Comet Observations (ICQ format)</a>
+        </h3>
+
+        <!-- My SOHO Comets -->
+        <h3>
+            <a href="SOHO/my_soho.htm" class="link-white">My SOHO Comets</a>
+        </h3>
+
+        <!-- Cheungtaklung -->
+        <h3>
+            <a href="TCheung/tcheung.html" class="link-white">(361193) Cheungtaklung</a>
+        </h3>
+
+        <h3><br></h3>
     </div>
-  </footer>
+
+    <h3>&nbsp;</h3>
+
+    <!-- Footer Section -->
+    <div>
+        <hr class="hr-60">
+        <p><br></p>
+        <p>
+            <img class="border-none" style="width: 267px; height: 40px;" alt="" src="images/email.png">
+        </p>
+        <p class="no-margin-top text-white font-small">
+            <br>
+            Copyright &copy; 2006-2026 Man-To Hui
+        </p>
+        <p class="no-margin-top">&nbsp;</p>
+    </div>
+
 </body>
 </html>
