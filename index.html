@@ -1,59 +1,166 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Homepage von Man-To Hui</title>
-  </head>
-  <body bgproperties="fixed" style="background-image: url(images/back.jpg); background-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"
-    link="#3399ff" leftmargin="90" vlink="#3399ff" rightmargin="90" alink="#0000ee">
-    <h1 style="font-family: Times New Roman;" align="center"><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage von Man-To Hui</title>
+  <style>
+    body {
+      background-image: url('images/back.jpg');
+      background-color: #ffffcc;
+      color: #000;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .rainbow-title {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 1em 0 0.5em;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .rainbow-title span { display: inline-block; }
+    .color-1 { color: #ff0000; }
+    .color-2 { color: #ff3300; }
+    .color-3 { color: #ff9933; }
+    .color-4 { color: #ffcc00; }
+    .color-5 { color: #0000ff; }
+    .color-6 { color: #00ff00; }
+    .color-7 { color: #33cc33; }
+    .color-8 { color: #59ddd7; }
+    .color-9 { color: #3399ff; }
+    nav {
+      margin: 1em 0;
+      font-size: 1.2em;
+    }
+    nav a {
+      color: #3399ff;
+      text-decoration: none;
+      margin: 0 0.7em;
+      transition: text-decoration 0.2s, color 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+      color: #ff3300;
+    }
+    .nav-divider {
+      color: #b0b0b0;
+    }
+    .banner-img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin-bottom: 1em;
+      border-radius: 6px;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #3399ff;
+      width: 90%;
+      max-width: 500px;
+      margin: 1.5em 0;
+    }
+    .comet-section a, .soho-section a, .cheung-section a {
+      color: #3399ff;
+      font-size: 1em;
+    }
+    .soho-section a, .cheung-section a {
+      color: #007799;
+      font-weight: bold;
+      background: #ddd;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      margin: 0.2em;
+      text-decoration: none;
+    }
+    .soho-section a:hover, .cheung-section a:hover {
+      background: #b8e9f5;
+      color: #000;
+    }
+    @media (max-width: 600px) {
+      .rainbow-title { font-size: 1.5em; }
+      .banner-img { max-width: 100%; }
+      nav { font-size: 1em; }
+    }
+    .email-img {
+      width: 267px;
+      height: 40px;
+      margin: 1em 0;
+      border: 0;
+    }
+    footer {
+      margin-top: 2em;
+      background: rgba(255,255,255,0.6);
+      width: 100%;
+      text-align: center;
+      padding: 1em 0 1.5em 0;
+    }
+    .copyright {
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="rainbow-title" aria-label="Homepage von Man-To Hui">
+      <span class="color-1">Ho</span>
+      <span class="color-2">m</span>
+      <span class="color-3">ep</span>
+      <span class="color-4">age</span>
+      <span class="color-5">&nbsp;</span>
+      <span class="color-6">vo</span>
+      <span class="color-7">n</span>
+      <span class="color-5">&nbsp;</span>
+      <span class="color-8">Man-</span>
+      <span class="color-9">To</span>
+      <span class="color-5"> Hui</span>
     </h1>
-    <h1 style="font-family: Times New Roman;" align="center"><b><font size="6" color="#ff0000">Ho</font><font
-          size="6" color="#ff3300">m</font><font size="6" color="#ff9933">ep</font><font
-          size="6" color="#ffcc00">age</font><font size="6" color="#0000ff"> </font><font
-          size="6" color="#00ff00">vo</font><font size="6" color="#33cc33">n</font><font
-          size="6" color="#0000ff"> </font><font size="6" color="#59ddd7">Man-</font><font
-          size="6" color="#3399ff">To</font><font size="6" color="#0000ff"> Hui</font></b>
-    </h1>
-    <div style="font-family: Times New Roman;" align="center">&nbsp; </div>
-    <div style="font-family: Times New Roman;" align="center"> <br>
+  </header>
+
+  <main>
+    <img class="banner-img" src="images/work_banner.png" alt="Work banner illustration for Man-To Hui">
+    <hr>
+    <nav aria-label="Primary navigation">
+      <a href="bib.html">Publications</a>
+      <span class="nav-divider">|</span>
+      <a href="scwrk/Research.html">Research</a>
+      <span class="nav-divider">|</span>
+      <a href="astrophoto/index.htm">Astrophotography</a>
+      <span class="nav-divider">|</span>
+      <a href="sketches/sketch.htm">Sketches</a>
+      <span class="nav-divider">|</span>
+      <a href="about-me.html">About me</a>
+      <span class="nav-divider">(</span>
+      <a href="VITA.pdf" target="_blank">PDF</a>
+      <span class="nav-divider">)</span>
+    </nav>
+
+    <section class="comet-section" aria-label="Comet Observations">
+      <a href="comet_obs/visual_obs_ICQ.htm">Comet Observations (ICQ format)</a>
+    </section>
+
+    <section class="soho-section" aria-label="SOHO Comets">
+      <a href="SOHO/my_soho.htm">My SOHO Comets</a>
+    </section>
+
+    <section class="cheung-section" aria-label="Cheungtaklung">
+      <a href="TCheung/tcheung.html">(361193) Cheungtaklung</a>
+    </section>
+  </main>
+
+  <footer>
+    <img class="email-img" src="images/email.png" alt="Email address for Man-To Hui">
+    <div class="copyright">
+      &copy; 2006-2026 Man-To Hui
     </div>
-    <div style="font-family: Times New Roman;" align="center">
-      <h3> <img style="width: 500px; height: 302px;" alt="" src="images/work_banner.png"><br>
-      </h3>
-      <hr width="500">
-      <h3> </h3>
-      <p><br>
-        <a href="scwrk/Research.html"><small><strong></strong></small></a></p>
-      <h3 style="color: rgb(51, 204, 255);"><a href="scwrk/Research.html"><strong></strong></a><font
-          color="#ffffff"></font><a href="bib.html">Publications</a><font><font
-            color="#ffffff"> | <a href="scwrk/Research.html">Research</a></font></font></h3>
-      <h3><font size="4" color="#3399ff"><a href="astrophoto/index.htm">Astrophotography</a></font></h3>
-      <h3><b><font size="4" color="#3399ff"><u> <a href="sketches/sketch.htm">Sketches</a></u></font></b><font
-          size="4" color="#ffffff"> </font><font size="4" color="#ffffff">| </font><b><a
-            href="about-me.html"><font size="4" color="#3399ff">About me</font></a><font
-            size="4" color="#3399ff"> (</font><a target="_blank" href="VITA.pdf"><font
-              size="4" color="#3399ff">PDF</font></a><font size="4" color="#3399ff">)</font></b><font
-          size="4" color="#ffffff"><br>
-        </font></h3>
-      <h3><b><font size="4" color="#3399ff">&nbsp;&nbsp;&nbsp; </font><a href="comet_obs/visual_obs_ICQ.htm"><font
-              size="4" color="#3399ff">Comet Observations (ICQ format)</font></a></b></h3>
-      <h3><span style="color: white; font-weight: bold;"><a href="SOHO/my_soho.htm">My
-            SOHO Comets</a></span></h3>
-      <h3><span style="color: white; font-weight: bold;"><a href="TCheung/tcheung.html">(361193)
-            Cheungtaklung</a></span></h3>
-      <h3><b><font size="4" color="#3399ff"><br>
-          </font></b></h3>
-    </div>
-    <h3 style="font-family: Times New Roman;" align="center"> </h3>
-    <div style="font-family: Times New Roman;" align="center">
-      <hr width="60%">
-      <p align="center"><br>
-      </p>
-      <p><img style="border: 0px solid ; width: 267px; height: 40px;" alt="" src="images/email.png"></p>
-      <p style="margin-top: 0pt;"><font size="2" color="#ffffff"> </font><font size="2" color="#ffffff"> </font><font size="2" color="#ffffff"><br>
-          Copyright © 2006-2026 Man-To Hui</font></p>
-      <p style="margin-top: 0pt;">&nbsp; </p>
-    </div>
-  </body>
+  </footer>
+</body>
 </html>
