@@ -7,222 +7,171 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <style>
-        :root {
-            --link-color: #0099ff;
-            --text-color: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Exact visual replica – no reset, no responsive overrides */
         body {
-            color: var(--text-color);
-            background-color: #ffffff;
+            color: #fff;
+            background-color: #fff;
             background-image: url('images/back.jpg');
             background-attachment: fixed;
-            font-family: 'Times New Roman', Times, serif;
-            padding: 20px;
-            line-height: 1.6;
+            font-family: "Times New Roman", Times, serif;
+            margin: 8px;
+            margin-left: 20px;                  /* original leftmargin="20" */
         }
+        a:link    { color: #0099ff; }
+        a:visited { color: #0099ff; }
+        a:active  { color: #0000ee; }
+        a:hover   { text-decoration: underline; }
 
-        a {
-            color: var(--link-color);
-            text-decoration: underline;
+        h1, h4 {
+            text-align: left;
+            margin: 0.67em 0;   /* browser default for h1/h4 */
         }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        h2 {
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
         h4 {
-            margin: 1rem 0;
+            margin: 1.33em 0; /* h4 default margins */
+            font-weight: bold;  /* original h4 bold (not styled otherwise) */
             font-size: 1.0rem;
-            font-weight: normal;
         }
 
+        /* Orbital elements table */
         .orbital-table {
             border-collapse: collapse;
-            margin: 1.5rem 0;
-            width: auto;
+            width: auto;                     /* exactly as original */
             max-width: 600px;
-            font-size: 0.95rem
+            margin: 1.5rem 0;                        /* no extra margins */
         }
-
-        .orbital-table th,
         .orbital-table td {
-            border: 0.5px solid rgba(255, 255, 255, 0.4);  /* Semi-transparent white */
-            padding: 0.0rem 0.5rem;
-            text-align: left;
+            border: 0.5px solid rgba(255, 255, 255, 0.4);
+            padding: 0.0rem 0.5rem;                       /* original cellpadding="0" */
             vertical-align: top;
         }
-
+        .orbital-table td:first-child {
+            white-space: nowrap;              /* prevent line breaks in labels */
+            width: auto;
+        }
         .orbital-table td:last-child {
             text-align: center;
-            white-space: nowrap;
         }
 
-        .orbital-table .param {
-            white-space: nowrap;
+        /* Orbit image table */
+        .image-table {
+            width: 700px;
+            margin: 0 auto;                  /* centred */
+            border: 0;
+            border-collapse: separate;
+            border-spacing: 2px;
         }
-
-        .orbit-image-container {
-            margin: 2rem 0;
+        .image-table td {
+            padding: 2px;
+            vertical-align: top;
+        }
+        .image-table .img-row {
             text-align: center;
         }
+        .image-table .caption-row {
+            font-style: italic;
+        }
 
+        /* Fixed‑size orbit image (exactly as original) */
         .orbit-image {
-            max-width: 100%;
-            height: auto;
+            width: 920px;
+            height: 600px;
             display: block;
-            margin: 0 auto;
+            margin: 0 auto;                   /* centre inside table cell */
         }
 
-        .orbit-caption {
-            margin-top: 1rem;
-            font-size: 0.95rem;
-            text-align: left;
-            max-width: 920px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .naming-image {
-            max-width: 100%;
-            height: auto;
+        /* Naming image */
+        .naming-img {
+            width: 743px;
+            height: 130px;
             display: block;
-            margin: 1rem 0;
+            margin: 1em 0;
         }
 
-        .content-section {
-            margin: 1.5rem 0;
-        }
-
+        /* Home link spacing */
         .home-link {
-            display: inline-block;
             margin-top: 2rem;
-        }
-
-        footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .orbital-table {
-                font-size: 0.9rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
         }
     </style>
 </head>
 <body>
-    <main>
-        <article>
-            <header>
-                <h2>Asteroid (51166) Huimanto = 2000 HW<sub>63</sub></h2>
-            </header>
 
-            <h4>Orbital Elements at Epoch 2459396.5 = 2021-Jul-01.0 TDB (JPL Solution 34):</h4>
+    <h1>Asteroid (51166) Huimanto = 2000 HW<sub>63</sub></h1>
 
-            <table class="orbital-table" aria-label="Orbital elements of asteroid (51166) Huimanto">
-                <tbody>
-                    <tr>
-                        <td>Eccentricity \(e\)</td>
-                        <td>0.18408</td>
-                    </tr>
-                    <tr>
-                        <td>Semimajor axis \(a\) (au)</td>
-                        <td>3.13258</td>
-                    </tr>
-                    <tr>
-                        <td>Inclination \(i\) (°)</td>
-                        <td>1.71839</td>
-                    </tr>
-                    <tr>
-                        <td class="param">Longitude of ascending node \(\Omega\) (°)</td>
-                        <td>34.85610</td>
-                    </tr>
-                    <tr>
-                        <td>Argument of perihelion \(\omega\) (°)</td>
-                        <td>339.19774</td>
-                    </tr>
-                    <tr>
-                        <td>Perihelion epoch \(t_{\rm p}\) (TDB)</td>
-                        <td>2019-May-26.574</td>
-                    </tr>
-                </tbody>
-            </table>
+    <h4>Orbital Elements at Epoch 2459396.5 = 2021-Jul-01.0 TDB (JPL Solution 34)</h4>
 
-            <p>
-                According to Maseiro et al. (2017, <cite>AJ</cite>, 741, 68), the asteroid has a 
-                diameter of 8.54 ± 0.46 km, and has a comet-like geometric albedo (4.2 ± 0.5)%.
-            </p>
+    <table class="orbital-table">
+        <tr>
+            <td>Eccentricity \(e\)</td>
+            <td>0.18408</td>
+        </tr>
+        <tr>
+            <td>Semimajor axis \(a\) (au)</td>
+            <td>3.13258</td>
+        </tr>
+        <tr>
+            <td>Inclination \(i\) (°)</td>
+            <td>1.71839</td>
+        </tr>
+        <tr>
+            <td>Longitude of ascending node \(\Omega\) (°)</td>
+            <td>34.85610</td>
+        </tr>
+        <tr>
+            <td>Argument of perihelion \(\omega\) (°)</td>
+            <td>339.19774</td>
+        </tr>
+        <tr>
+            <td>Perihelion epoch \(t_{\rm p}\) (TDB)</td>
+            <td>2019-May-26.574</td>
+        </tr>
+    </table>
 
-            <figure class="orbit-image-container">
-                <img 
-                    src="images/orbview_huimanto.png" 
-                    alt="Orbit diagram of asteroid (51166) Huimanto showing positions relative to major planets"
-                    class="orbit-image"
-                    loading="lazy"
-                >
-                <figcaption class="orbit-caption">
-                    Orbit of the asteroid plotted by 
-                    <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=huimanto&amp;view=VOP" 
-                       target="_blank" 
-                       rel="noopener noreferrer">Orbit Viewer</a> 
-                    of JPL Horizons. Positions of the asteroid and the major planets are on UTC 2020-08-23.0. 
-                    The direction of the vernal equinox and the normal of the ecliptic are drawn as two 
-                    orthogonal yellow solid lines. The arc of the asteroid's orbit above the ecliptic is 
-                    shown as the white solid curve, while the thinner section is below the ecliptic.
-                </figcaption>
-            </figure>
+    <p>
+        According to Maseiro et al. (2017, <cite>AJ</cite>, 741, 68), the asteroid has a
+        diameter of 8.54 ± 0.46 km, and has a comet-like geometric albedo (4.2 ± 0.5)%.
+    </p>
 
-            <section class="content-section">
-                <p>
-                    The announcement was made in 
-                    <a href="https://www.wgsbn-iau.org/files/Bulletins/V001/WGSBNBull_V001_002.pdf" 
-                       target="_blank" 
-                       rel="noopener noreferrer">WGSBN Bull. 1, #2, 26</a> 
-                    on 2021 June 11th:
-                </p>
+    <table class="image-table">
+        <tr class="img-row">
+            <td>
+                <img class="orbit-image"
+                     src="images/orbview_huimanto.png"
+                     alt="Orbit diagram of asteroid (51166) Huimanto">
+            </td>
+        </tr>
+        <tr class="caption-row">
+            <td>
+                Orbit of the asteroid plotted by
+                <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=huimanto&amp;view=VOP"
+                   target="_blank" rel="noopener noreferrer">Orbit Viewer</a>
+                of JPL Horizons. Positions of the asteroid and the major planets are on
+                UTC 2020-08-23.0. The direction of the vernal equinox and the normal
+                of the ecliptic are drawn as two orthogonal yellow solid lines. The arc
+                of the asteroid's orbit above the ecliptic is shown as the white solid
+                curve, while the thinner section is below the ecliptic.
+            </td>
+        </tr>
+    </table>
 
-                <img 
-                    src="images/naming_huimanto.png" 
-                    alt="Official naming announcement for asteroid Huimanto"
-                    class="naming-image"
-                    loading="lazy"
-                >
-            </section>
+    <p>
+        The announcement was made in
+        <a href="https://www.wgsbn-iau.org/files/Bulletins/V001/WGSBNBull_V001_002.pdf"
+           target="_blank" rel="noopener noreferrer">WGSBN Bull. 1, #2, 26</a>
+        on 2021 June 11th:
+    </p>
 
-            <section class="content-section">
-                <p>
-                    I quite like the provisional and permanent designations of this asteroid. 
-                    My appreciation for people at the Lowell Observatory naming this asteroid after me.
-                </p>
-            </section>
-        </article>
-    </main>
+    <p>
+        <img class="naming-img"
+             src="images/naming_huimanto.png"
+             alt="Official naming announcement for asteroid Huimanto">
+    </p>
 
-    <footer>
-        <nav>
-            <a href="index.html" class="home-link" aria-label="Return to homepage">Home</a>
-        </nav>
-    </footer>
+    <p>
+        I quite like the provisional and permanent designations of this asteroid.
+        My appreciation for people at the Lowell Observatory naming this asteroid after me.
+    </p>
+
+    <p class="home-link"><a href="index.html">Home</a></p>
+
 </body>
 </html>
